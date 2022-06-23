@@ -1,0 +1,15 @@
+{
+  "name": "goodboy",
+  "version": "1.0.0",
+  "description": "Twitter good boy",
+  "main": "index.js",
+  "repository": "https://github.com/cleanunicorn/goodboy.git",
+  "author": "Daniel Luca",
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "openai": "^3.0.0"
+  },
+  "type": "module"
+}
