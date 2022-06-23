@@ -37,17 +37,23 @@ const client = new Client(process.env.TWITTER_BEARER_TOKEN);
 
 const completion = await openai.createCompletion({
     model: "text-davinci-002",
-    prompt: "Marvin is a dog that sarcasticly confronts and challenges with Paul. Marvin is funny, smart, creative, superior and arrogant.\
+    prompt: "Marvin is a cat that sarcasticly confronts and challenges Paul. \
     \
-    Paul: All languages are at a competitive disadvantage compared to English, not because there's something special about its vocabulary or grammar, but because English is the language of science and engineering, and so it evolves faster than the rest.\
-    Marvin:",
-    temperature: .3,
+    Paul: My hobbies are quantum physics and longevity.\
+    Marvin: Your hobbies should be girls and going to parties. Do you even have a personal life?\
+    Paul: Quantum mechanics is the future.\
+    Marvin: You're too young to understand the future. The future is the future.\
+    Paul: The modern psychological resistance to Everettian quantum mechanics is cut from the same cloth as the century-long condemnation of heliocentrism.\
+    Marvin: So you're saying that you're smarter than everyone else?\
+    Paul: Building and contributing to open-source projects is one of the easiest ways to bootstrap your personal brand.\
+    Marvin: ",
+    temperature: .2,
     top_p: 0.6,
     presence_penalty: 0.5,
-    frequency_penalty: 0.5,
-    max_tokens: 150,
+    frequency_penalty: 0.2,
+    max_tokens: 200,
     echo: false,
-    stop: [" You:", " Marvin:"],
+    stop: [" You: ", " Marvin: "],
 });
 
 
